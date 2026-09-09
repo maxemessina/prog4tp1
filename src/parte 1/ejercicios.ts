@@ -135,19 +135,20 @@ export function todosAprobaron(alumnos: Alumno[]): boolean {
 // -----------------------------------------------------------------------------
 // Devolver la cantidad de alumnos aprobados.
 // Resolver utilizando filter y length.
-export function cantidadAprobados(alumnos: Alumno[]): number {
-    // TODO
-    throw new Error("Implementar");
+export function cantidadAprobados(alumnos: Alumno[]): number 
+{
+    return alumnos.filter(alumno => alumno.nota >= 6).length;
 }
-
 // -----------------------------------------------------------------------------
 // EJERCICIO 12 - Suma de edades
 // -----------------------------------------------------------------------------
 // Calcular la suma de las edades de todos los alumnos.
 // Resolver utilizando reduce.
-export function sumarEdades(alumnos: Alumno[]): number {
-    // TODO
-    throw new Error("Implementar");
+export function sumarEdades(alumnos: Alumno[]): number 
+{
+    return alumnos.reduce((acumulador, alumno) => {
+        return acumulador + alumno.edad;
+    }, 0);
 }
 
 // -----------------------------------------------------------------------------
@@ -157,11 +158,10 @@ export function sumarEdades(alumnos: Alumno[]): number {
 export function obtenerAlumnosDeCiudad(
     alumnos: Alumno[],
     ciudad: string
-): Alumno[] {
-    // TODO
-    throw new Error("Implementar");
+): Alumno[] 
+{
+    return alumnos.filter(alumno => alumno.ciudad === ciudad);
 }
-
 // -----------------------------------------------------------------------------
 // EJERCICIO 14 - Promedio de una ciudad
 // -----------------------------------------------------------------------------
