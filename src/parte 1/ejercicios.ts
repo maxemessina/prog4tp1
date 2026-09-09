@@ -265,13 +265,17 @@ export function calcularTotal(
 // }
 //
 // Resolver utilizando reduce.
-export function agruparPorCiudad(
-    alumnos: Alumno[]
-): Record<string, Alumno[]> {
-    // TODO
-    throw new Error("Implementar");
-}
+export function agruparPorCiudad(alumnos: Alumno[]): Record<string, Alumno[]> {
+    return alumnos.reduce((grupos, alumno) => {
+        if (grupos[alumno.ciudad]) {
+            grupos[alumno.ciudad].push(alumno);
+        } else {
+            grupos[alumno.ciudad] = [alumno];
+        }
 
+        return grupos;
+    }, {} as Record<string, Alumno[]>);
+}
 // -----------------------------------------------------------------------------
 // EJERCICIO 20 - Estadísticas generales
 // -----------------------------------------------------------------------------
