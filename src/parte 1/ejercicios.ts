@@ -243,9 +243,11 @@ export function buscar<T>(
 export function calcularTotal(
     alumnos: Alumno[],
     callback: (alumno: Alumno) => number
-): number {
-    // TODO
-    throw new Error("Implementar");
+): number 
+{
+    return alumnos.reduce((acumulador, alumno) => {
+        return acumulador + callback(alumno);
+    }, 0);
 }
 
 // -----------------------------------------------------------------------------
