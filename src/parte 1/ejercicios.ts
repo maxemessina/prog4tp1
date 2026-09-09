@@ -227,11 +227,10 @@ export function filtrar<T>(
 export function buscar<T>(
     elementos: T[],
     callback: (elemento: T) => boolean
-): T | undefined {
-    // TODO
-    throw new Error("Implementar");
+): T | undefined 
+{
+    return elementos.find(elemento => callback(elemento));
 }
-
 // -----------------------------------------------------------------------------
 // EJERCICIO 18 - Calcular con callback
 // -----------------------------------------------------------------------------
