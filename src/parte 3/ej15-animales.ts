@@ -33,7 +33,7 @@ export class Vaca extends Animal {
 
 export class Pajaro extends Animal {
     hacerSonido(): string {
-        return "Pio";
+        return "Pío";
     }
 }
 
@@ -42,6 +42,7 @@ export class Pajaro extends Animal {
  * su nombre junto con el resultado de `animal.hacerSonido()`.
  */
 export function hacerSonidos(animales: Animal[]): void {
-    // TODO
-    throw new Error("Implementar");
+    animales.forEach(animal => {
+        console.log(animal.hacerSonido());
+    });
 }
