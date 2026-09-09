@@ -213,11 +213,10 @@ export function transformar<T, R>(
 export function filtrar<T>(
     elementos: T[],
     callback: (elemento: T) => boolean
-): T[] {
-    // TODO
-    throw new Error("Implementar");
+): T[]
+{
+    return elementos.filter(elemento => callback(elemento));
 }
-
 // -----------------------------------------------------------------------------
 // EJERCICIO 17 - Buscar con callback
 // -----------------------------------------------------------------------------
