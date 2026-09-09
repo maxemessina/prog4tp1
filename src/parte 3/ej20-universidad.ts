@@ -58,7 +58,6 @@ export class Materia {
         if (!this.docentesAsignados.some(d => d.legajo === docente.legajo)) {
             this.docentesAsignados.push(docente);
         }
-        throw new Error("Implementar");
     }
 
     getAlumnosInscriptos(): Alumno[] {
