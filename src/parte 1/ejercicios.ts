@@ -199,10 +199,8 @@ export function transformar<T, R>(
     elementos: T[],
     callback: (elemento: T) => R
 ): R[] {
-    // TODO
-    throw new Error("Implementar");
+    return elementos.map(elemento => callback(elemento));
 }
-
 // -----------------------------------------------------------------------------
 // EJERCICIO 16 - Filtrar con callback
 // -----------------------------------------------------------------------------
