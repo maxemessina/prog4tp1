@@ -296,11 +296,39 @@ export interface Estadisticas {
     mejorAlumno: Alumno | undefined;
 }
 
-export function obtenerEstadisticas(
-    alumnos: Alumno[]
-): Estadisticas {
-    // TODO
-    throw new Error("Implementar");
+export function obtenerEstadisticas(alumnos: Alumno[]): Estadisticas {
+    const cantidadTotal = alumnos.length;
+
+    const cantidadAprobados = alumnos.filter(
+        alumno => alumno.nota >= 6
+    ).length;
+
+    const cantidadDesaprobados = cantidadTotal - cantidadAprobados;
+
+    const promedio =
+        alumnos.length === 0
+            ? 0
+            : alumnos.reduce((acumulador, alumno) => {
+                  return acumulador + alumno.nota;
+              }, 0) / alumnos.length;
+
+    const mejorAlumno = alumnos.reduce<Alumno | undefined>(
+        (mejor, alumno) => {
+            if (!mejor || alumno.nota > mejor.nota) {
+                return alumno;
+            }
+            return mejor;
+        },
+        undefined
+    );
+
+    return {
+        cantidadTotal,
+        cantidadAprobados,
+        cantidadDesaprobados,
+        promedio,
+        mejorAlumno
+    };
 }
 
 // -----------------------------------------------------------------------------
