@@ -15,29 +15,25 @@ export abstract class Animal {
 
 export class Perro extends Animal {
     hacerSonido(): string {
-        // TODO: devolver "Guau"
-        throw new Error("Implementar");
+        return "Guau";
     }
 }
 
 export class Gato extends Animal {
     hacerSonido(): string {
-        // TODO: devolver "Miau"
-        throw new Error("Implementar");
+        return "Miau";
     }
 }
 
 export class Vaca extends Animal {
     hacerSonido(): string {
-        // TODO: devolver "Muu"
-        throw new Error("Implementar");
+        return "Muu";
     }
 }
 
 export class Pajaro extends Animal {
     hacerSonido(): string {
-        // TODO: devolver "Pío"
-        throw new Error("Implementar");
+        return "Pio";
     }
 }
 
