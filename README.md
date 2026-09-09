@@ -1,4 +1,9 @@
-# Práctica 1 - TypeScript
+# Grupo 1  Práctica 1 - TypeScript
+### Integrantes:
+* Prisicila Arrimada.
+* Tomás Astudillo.
+* Valentina Guerrieri.
+* Máximo Messina.
 
 Tres partes, mismo repo:
 
