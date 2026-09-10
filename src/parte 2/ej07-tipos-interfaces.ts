@@ -16,42 +16,52 @@
 //TODO rever la interface no me gusta para esto.
 
 export interface AlumnoInterface {
-    legajo: number;
-    nombre: string;
-    apellido: string;
-    edad: number;
-    email: string;
+  legajo: number;
+  nombre: string;
+  apellido: string;
+  edad: number;
+  email: string;
 }
 
 export function crearAlumnoInterface(
-    legajo: number,
-    nombre: string,
-    apellido: string,
-    edad: number,
-    email: string
+  legajo: number,
+  nombre: string,
+  apellido: string,
+  edad: number,
+  email: string,
 ): AlumnoInterface {
-    // TODO
-    throw new Error("Implementar");
+  return {
+    legajo,
+    nombre,
+    apellido,
+    edad,
+    email,
+  };
 }
 
 // -----------------------------------------------------------------------------
 // Versión con `type`
 // -----------------------------------------------------------------------------
 export type AlumnoType = {
-    legajo: number;
-    nombre: string;
-    apellido: string;
-    edad: number;
-    email: string;
+  legajo: number;
+  nombre: string;
+  apellido: string;
+  edad: number;
+  email: string;
 };
 
 export function crearAlumnoType(
-    legajo: number,
-    nombre: string,
-    apellido: string,
-    edad: number,
-    email: string
+  legajo: number,
+  nombre: string,
+  apellido: string,
+  edad: number,
+  email: string,
 ): AlumnoType {
-    // TODO
-    throw new Error("Implementar");
+  return {
+    legajo,
+    nombre,
+    apellido,
+    edad,
+    email,
+  };
 }
